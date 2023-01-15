@@ -91,7 +91,7 @@ def _color_movie_text(movie1_vector : np.ndarray, movie2_vector : np.ndarray, mo
             color = noEvaluate_color
         else:
             word_id = word2id[word]
-            if words_importances[word_id]>=middle_importance:  # TODO: tune that?
+            if words_importances[word_id]>=middle_importance:  
                 color = highImportance_color 
             elif words_importances[word_id]>0:
                 color = middleImportance_color
@@ -146,7 +146,7 @@ def _color_mostRelevantWords_cosSimilarity(movie1_vector : np.ndarray, movie2_ve
     mostRelevantWords_colored_string = ''
     for word in most_relevant_words:
         word_id = word2id[word]
-        if words_importances[word_id]>=middle_importance:  # TODO: tune that?
+        if words_importances[word_id]>=middle_importance:
             color = highImportance_color 
         elif words_importances[word_id]>0:
             color = middleImportance_color

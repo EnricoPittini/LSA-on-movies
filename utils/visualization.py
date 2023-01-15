@@ -204,7 +204,6 @@ def plot_genres_analysis(vh : np.ndarray, s : np.ndarray, df : pd.DataFrame, gen
     fig, ax = plt.subplots(figsize=(10,10))
     intersection_mask = df['genres'].map(lambda s: len(set(genres).intersection(s))>=2).to_numpy()
     for i, genre in enumerate(genres):
-        # TODO if i>len(mcolors.TABLEAU_COLORS) => random color `color`
         color = mcolors.TABLEAU_COLORS[colors_indices[i]]
         genre_mask = df['genres'].map(lambda s: genre in s).to_numpy()
         if delete_intersection:
@@ -288,7 +287,6 @@ def plot_genres_analysis_coll(vh : np.ndarray, s : np.ndarray, df_movies : pd.Da
     fig, ax = plt.subplots(figsize=(10,10))
     intersection_mask = df_movies['genres'].map(lambda s: len(set(genres).intersection(s))>=2).to_numpy()
     for i, genre in enumerate(genres):
-        # TODO if i>len(mcolors.TABLEAU_COLORS) => random color `color`
         color = mcolors.TABLEAU_COLORS[colors_indices[i]]
         genre_mask = df_movies['genres'].map(lambda s: genre in s).to_numpy()
         if delete_intersection:
